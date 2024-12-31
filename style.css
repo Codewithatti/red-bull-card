@@ -1,0 +1,90 @@
+ /* credit :online tutorial */
+ /* thanks bro  */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: cursive;
+}
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    overflow: hidden;
+    background: #000000;
+} 
+.text{
+    position: absolute;
+    cursor: pointer;
+}
+.text::before
+{
+    content: 'Bye Bye';
+    position: absolute;
+    width: 100%;
+    color: white;
+    text-align: center;
+    font-family: monospace;
+    font-size:2em;
+    transition: 1s;
+}
+.text::after{
+    content: 'Happy New Year ';
+    position: absolute;
+    left: 0;
+    top: -0.75em;
+    width: 100%;
+    color: white;
+text-align: center;
+font-style: italic;
+font-size: 2em;
+transition: 1s;
+transform: translateY(100px);
+opacity: 0;
+filter: blur(30px);
+}
+.text:hover::before{
+    transform: translateY(-100px);
+    transition: 1s;
+    opacity: 0;
+    filter: blur(30px);
+}
+.text:hover::after{
+    transform: translateY(0px);
+    opacity: 1;
+    filter: blur(0px);
+}
+.text span {
+ display: inline-block;
+ color:white;
+ font-size: 10em;
+ font-weight: bold;
+ transition: 2s;
+ filter:  blur(1);
+
+}
+.text span:last-child{
+    color: red;
+}
+.text:hover span:last-child{
+    transform: rotate(45deg
+    ) translateY(-200px);
+    opacity: 0;
+    filter: blur(30px);
+}
+.text span:nth-child(3):after{
+    content:'5';
+    position: absolute;
+    transform: rotate(-45deg) translateY(200px);
+    opacity: 0;
+    filter: blur(30px);
+    color: gold;
+    transition: 2s;
+
+}
+.text:hover span:nth-child(3):after{
+    transform: rotate(0deg) translateY(0px);
+    opacity: 1;
+    filter: blur(0px);
+}
